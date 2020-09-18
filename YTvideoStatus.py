@@ -151,7 +151,7 @@ def updateMany(data):
 Youtube API functions
 """
 def youtubeStatus(id_of_video):
-    api_key = 'AIzaSyA-SLqDUtyMcKGGoUxJXL0mYQ2cRsbWoq0'
+    api_key = 'key'
     url = f'https://www.googleapis.com/youtube/v3/videos?id={id_of_video}&key={api_key}&part=status'
     url_get = requests.get(url)
     result = url_get.json()['items'][0]['status']['publicStatsViewable']
@@ -159,7 +159,7 @@ def youtubeStatus(id_of_video):
 
 
 def youtubeContents(id_of_video):
-    api_key = 'AIzaSyA-SLqDUtyMcKGGoUxJXL0mYQ2cRsbWoq0'
+    api_key = 'key'
     url = f'https://www.googleapis.com/youtube/v3/videos?id={id_of_video}&key={api_key}&part=snippet'
     url_get = requests.get(url)
     result = url_get.json()['items'][0]['snippet']['channelId']
